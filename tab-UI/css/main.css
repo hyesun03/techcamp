@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#profile {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+#profile img {
+  width: 80px;
+}
+
+#user-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#user-sayhi {
+  color:  rgb(131, 126, 126);
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+#user-sns-info {
+  color:  rgb(131, 126, 126);
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+.snsCount {
+  color: rgb(131, 224, 140);
+  margin: 0 7px 0 0;
+}
+
+#wrapper nav {
+  height: 40px;
+  margin: 50px 0 0 2%;
+}
+
+.tab {
+  width: 24.5%;
+  height: 100%;
+  line-height: 40px;
+  float: left;
+  text-align: center;
+  outline: 1px solid rgb(204, 205, 205);
+}
+
+.selectedTab {
+	background-color: #DF9274;
+	color: #fff;
+}
+
+section {
+  width: 96%;
+  padding: 5%;
+  display: block;
+}
+
+.sectionHead {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.sectionDesc {
+  width: 96%;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+#blog-btn {
+  width: 70px;
+  height: 30px;
+  margin: 0 0 20px 5%;
+}
+
+#blog-list {
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+}
+
+.content {
+  line-height: 23px;
+  margin: 15px 0 15px 0;
+}
+
+.author{
+  float: left;
+  font-size: 15px;
+  margin: 0 15px 0 0;
+  color: rgb(131, 224, 140);
+}
+
+.like {
+  font-size: 15px;
+  color: rgb(135, 180, 240);
+}
+
+.comment {
+  margin: 15px 0 15px 0;
+  color:  rgb(131, 126, 126);
+  line-height: 25px;
+}

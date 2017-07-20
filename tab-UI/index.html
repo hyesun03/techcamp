@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>tabUI-hyesun03</title>
+    <script src="js/main.js" ></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script type="myTemplate" id="blog-list-template">
+      {{#each this}}
+        <li>
+          <div class="content">{{content}}</div>
+          <div class="author">{ 게시자: <span class="author-name">{{name}} </span>} </div>
+          <div class="like"> { 좋아요: <span class="like-num">{{like}} </span>}</div>
+          <div class="comment">
+            {{#each comment}}
+              <div>> {{this}}</div>
+            {{/each}}
+          </div>
+        </li>
+        <hr />
+      {{/each}}
+    </script>
+    <script type="myTemplate" id="tab-content-template">
+      <ul>
+        <il>
+          <div class="sectionHead">{{title}}</div>
+          <div class="sectionDesc">{{body}}</div>
+        </il>
+      </ul>
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="profile">
+        <img src="user-profile.png" alt="hyesun03님의 프로필 사진">
+        <div id="user-name">hyesun03</div>
+        <div id="user-sayhi">안녕하세요. hyesun03 입니다.</div>
+        <ul id="user-sns-info">
+          <il><span>review: </span><span class="snsCount">10</span></il>
+          <il><span>follower: </span><span class="snsCount">23</span></il>
+          <il><span>following: </span><span class="snsCount">30</span></il>
+        </ul>
+      </div>
+      <nav>
+        <div class="tab selectedTab" id="aboutme"><span >aboutMe</span></div>
+        <div class="tab" id="friend"><span >friend</span></div>
+        <div class="tab" id="theme"><span >theme</span></div>
+        <div class="tab"id="news"><span >news</span></div>
+      </nav>
+      <section id="tab-content">
+        <div class="sectionHead" >blah blah !</div>
+        <div class="sectionDesc" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque recusandae hic obcaecati maxime officiis commodi! Cumque maiores maxime quam quidem deleniti, aspernatur iste, minima sit laboriosam laudantium saepe dignissimos provident.</div>
+      </section>
+      <button id="blog-btn">Blog List</button>
+      <div id="blog-list">
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
