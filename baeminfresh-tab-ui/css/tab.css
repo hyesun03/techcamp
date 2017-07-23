@@ -53,9 +53,43 @@
   background-color: white;
 }
 
+.product_box a:hover .thumb_img_hover {
+  display: block;
+}
+
+.product_box a {
+  position: relative;
+}
+
+.thumb_img {
+  max-height: 304px;
+}
+
 .thumb_img img{
   width: 304px;
-  height: auto;
+}
+
+.thumb_img_hover {
+  width: 304px;
+  height: 0px;
+  padding: 120px 0 184px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  opacity: 0.65;
+  position: absolute;
+  bottom: 138px;
+  text-align: center;
+  display: none;
+}
+
+.thumb_img_hover hr {
+  width: 65px;
+  height: 1px;
+  background-color: white;
+  border: none;
+  margin: 7px auto 10px auto;
 }
 
 .badge_area {
