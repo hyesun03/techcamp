@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const viewPort = document.getElementById('viewport');
   const items = [...document.querySelectorAll('.foodBox')];
   let idx = items.length - 1; // idx 초기값은 배열의 마지막 꺼. 현재 배열길이는 9개. idx=9
-  let prevFlag = false;
 
   prevBtn.addEventListener("click", function() {
     console.log("idx: ", idx);

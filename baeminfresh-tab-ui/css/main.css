@@ -273,10 +273,56 @@ dd {
 }
 /* tab end */
 
-/* temp */
-.blank {
-  width: 100%;
-  height: 1000px;
-  background-color: rgb(221, 243, 252);
+/* banchan slide */
+.banchan_slide {
+  width: auto;
+  height: 600px;
+  padding-top: 1px;
 }
-/* temp end */
+
+#banchan-wrapper {
+  margin: 150px 0 0 200px;
+}
+
+#banchan-viewport {
+  width: 800px;
+  height: 250px;
+  overflow: hidden;
+  outline: 3px solid pink;
+  display: -webkit-inline-box;
+}
+
+#slide-btn-box {
+  margin-top: 50px;
+}
+
+.slide-btn {
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.food_box {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  transition: .5s;
+  position: relative;
+}
+
+.food_img {
+  width: 200px;
+  height: 200px;
+  background-size: 200px 200px;
+  border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+/* banchan slide end */
