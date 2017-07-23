@@ -6,6 +6,7 @@
     <link href="css/tab.css" rel="stylesheet" type="text/css" />
     <link href="css/banchan-slide.css" rel="stylesheet" type="text/css" />
     <link href="css/banner-image.css" rel="stylesheet" type="text/css" />
+    <link href="css/modal.css" rel="stylesheet" type="text/css" />
     <script src="js/main.js" ></script>
     <script src="js/banner.js" ></script>
     <script src="js/tab.js" ></script>
@@ -15,7 +16,7 @@
     <script type="myTemplate" id="tab-content-template">
       {{#each this}}
         <div class="product_box">
-          <a href="">
+          <a href="#/" id="{{detail_hash}}" class="product_area">
             <div class="thumb_img">
               <img src="{{image}}" alt="">
             </div>
@@ -43,7 +44,6 @@
     <script type="myTemplate" id="banchan-template">
       {{#each this}}
         <div class="banchan_box">
-          <a href="">
             <div class="banchan_thumb_img">
               <img src="{{image}}" alt="">
             </div>
@@ -147,6 +147,30 @@
       </ul>
       <div id="best-container">
 
+      </div>
+    </div>
+    <!--modal-->
+    <div id="best-product-modal" class="modal">
+      <span id="modal-close">&times;</span>
+      <div id="modal-content">
+        <div id="modal-left">
+          <div id="modal-thumb-images">
+            <div class="modal_thumb_image" id="mod1"></div>
+            <div class="modal_thumb_image" id="mod2"></div>
+            <div class="modal_thumb_image" id="mod3"></div>
+            <div class="modal_thumb_image" id="mod4"></div>
+          </div>
+          <div id="top-image"></div>
+        </div>
+        <div id="modal-right">
+          <div id="modal-title"></div>
+          <div id="modal-desc"></div>
+          <div id="modal-point"><span class="modal-info-span">적립금</span></div>
+          <div id="modal-delivery-info"><span class="modal-info-span">배송정보</span></div>
+          <div id="modal-delivery-fee"><span class="modal-info-span">배송비</span></div>
+        </div>
+
+        <div></div>
       </div>
     </div>
     <!--반찬 슬라이드-->
