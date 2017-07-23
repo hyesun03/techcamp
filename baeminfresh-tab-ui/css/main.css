@@ -110,7 +110,7 @@ ul.main_slides_lst li a {
 }
 
 .slides_container div.slides_navi a.slides_next {
-  margin-left: 90%;
+  margin-left: calc(90% - 66px);  /* 화살표의 width만큼 빼줌*/
   background-position: right center;
 }
 
