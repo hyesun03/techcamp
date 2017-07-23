@@ -11,6 +11,7 @@
     <script src="js/tab.js" ></script>
     <script src="js/banchan-slide.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <!--tab content 템플릿-->
     <script type="myTemplate" id="tab-content-template">
       {{#each this}}
         <div class="product_box">
@@ -31,7 +32,33 @@
             </dl>
             <div class="badge_area">
               {{#each badge}}
-                <span class="product_badge">{{this}}</span>
+                <span class="badge">{{this}}</span>
+              {{/each}}
+            </div>
+          </a>
+        </div>
+      {{/each}}
+    </script>
+    <!--하단 반찬 슬라이드 템플릿-->
+    <script type="myTemplate" id="banchan-template">
+      {{#each this}}
+        <div class="banchan_box">
+          <a href="">
+            <div class="banchan_thumb_img">
+              <img src="{{image}}" alt="">
+            </div>
+
+            <dl>
+              <dt class="banchan_title">{{title}}</dt>
+              <dd class="banchan_desc">{{description}}</dd>
+              <dd>
+                <span class="banchan_n_price">{{n_price}}</span>
+                <span class="banchan_s_price">{{s_price}}</span>
+              </dd>
+            </dl>
+            <div class="banchan_badge_area">
+              {{#each badge}}
+                <span class="badge">{{this}}</span>
               {{/each}}
             </div>
           </a>
@@ -124,49 +151,16 @@
     </div>
     <!--반찬 슬라이드-->
     <div class="content banchan_slide">
+      <h3>국물요리: woowa/course/</h3>
+      <h1>김이 모락모락 국물요리</h1>
       <div id="banchan-wrapper">
         <div id="banchan-viewport">
-          <div class="food_box food0">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/HDDA3/f28fb3ce4f301a0a5ad4bbbffbd786f7.jpg')"></div>
-            <div class="food_id">1</div>
-          </div>
-          <div class="food_box food1">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H4644/2c444edbf8a6a7b1bb3fcda793505d9b.jpg')"></div>
-            <div class="food_id">2</div>
-          </div>
-          <div class="food_box food2">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H58E6/02744aa9336ee0770c6580dea569507a.jpg')"></div>
-            <div class="food_id">3</div>
-          </div>
-          <div class="food_box food3">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/HAA9A/57c51f3dafd63effc3163863116355b2.jpg')"></div>
-            <div class="food_id">4</div>
-          </div>
-          <div class="food_box food4">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H53B7/5b930a7f55682aa2a801a0de41c0d0a1.jpg')"></div>
-            <div class="food_id">5</div>
-          </div>
-          <div class="food_box food5">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H4D0B/34d8c225663599bd0ad2e606c9bafbc8.jpg')"></div>
-            <div class="food_id">6</div>
-          </div>
-          <div class="food_box food6">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H1ECC/d5431e0bb9495528289210a16a595f7d.jpg')"></div>
-            <div class="food_id">7</div>
-          </div>
-          <div class="food_box food7">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/HB9D1/842813770da2092d1eb553c2e843a00c.jpg')"></div>
-            <div class="food_id">8</div>
-          </div>
-          <div class="food_box food8">
-            <div class="food_img" style="background-image: url('https://cdn.bmf.kr/_data/product/H9E7E/0794c65d00df904b6d67f7cf460f4863.jpg')"></div>
-            <div class="food_id">9</div>
-          </div>
+
         </div>
-        <div id="slide-btn-box">
-          <button id="prev-btn" class="slide-btn"><</button>
-          <button id="next-btn" class="slide-btn">></button>
-        </div>
+      </div>
+      <div id="slide-btn-box">
+        <button id="banchan-prev-btn" class="banchan_slide_btn"><</button>
+        <button id="banchan-next-btn" class="banchan_slide_btn">></button>
       </div>
     </div>
   </body>

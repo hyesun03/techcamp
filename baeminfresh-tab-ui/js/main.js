@@ -6,5 +6,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const bestTab = new Tab(baseurl, category, tab);
   const mainBanner = new Banner(pagination);
-  const banchanSlide = new BanchanSlide();
+  const banchanSlide = new BanchanSlide(baseurl);
 });

@@ -1,11 +1,14 @@
 class BanchanSlide {
-  constructor() {
-    this.prevBtn = document.getElementById('prev-btn');
-    this.nextBtn = document.getElementById('next-btn');
+  constructor(baseurl, items) {
+    this.baseurl = baseurl;
+    this.prevBtn = document.getElementById('banchan-prev-btn');
+    this.nextBtn = document.getElementById('banchan-next-btn');
     this.viewPort = document.getElementById('banchan-viewport');
-    this.items = [...document.querySelectorAll('.food_box')];
-    this.idx = this.items.length - 1; // idx 초기값은 배열의 마지막 꺼. 현재 배열길이는 9개. idx=9
+    this.getBanchanList();
     this.onEvent();
+    this.items = [];
+    this.idx = -1;
+    // this.idx = this.items.length - 1; // idx 초기값은 배열의 마지막 꺼. 현재 배열길이는 9개. idx=9
   }
 
   onEvent() {
@@ -19,7 +22,7 @@ class BanchanSlide {
 
     for(let i = 0; i < that.items.length; i++) {
       that.items[i].style.transition = "none";
-      that.items[i].style.left = "-800px";
+      that.items[i].style.left = "-960px";
     }
 
     setTimeout(function() {
@@ -35,7 +38,7 @@ class BanchanSlide {
   nextBtnEventHandler(e) {
     for(let i = 0; i < this.items.length; i++) {
       this.items[i].style.transition = ".5s";
-      this.items[i].style.transform = "translateX(-800px)";
+      this.items[i].style.transform = "translateX(-960px)";
     }
     const that = this;
 
@@ -68,4 +71,29 @@ class BanchanSlide {
     arr[idx].parentNode.insertBefore(arr[this.getPositiveIdx(idx, 6)], arr[this.getPositiveIdx(idx, 7)].nextSibiling);
     arr[idx].parentNode.insertBefore(arr[this.getPositiveIdx(idx, 5)], arr[this.getPositiveIdx(idx, 6)].nextSibiling);
   }
+
+  getBanchanList() {
+    const that = this;
+    const oReq = new XMLHttpRequest();
+
+    oReq.addEventListener("load", function(e) {
+      const htData = JSON.parse(oReq.responseText);
+      that.setBanchanList(htData);
+    });
+
+    oReq.open("GET", this.baseurl + "woowa/course");
+    oReq.send();
+  }
+
+  setBanchanList(data) {
+    const source = document.getElementById("banchan-template").innerHTML;
+  	const template = Handlebars.compile(source);
+
+  	document.getElementById("banchan-viewport").innerHTML += template(data);
+
+    // DOM에 그려지고 나서야 items를 가져올 수 있기 때문...
+    this.items = [... document.getElementsByClassName('banchan_box')];
+    this.idx = this.items.length - 1;
+  }
+
 }

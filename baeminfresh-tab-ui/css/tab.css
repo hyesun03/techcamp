@@ -102,7 +102,7 @@
   margin: 0 0 10px 10px;
 }
 
-.product_badge {
+.badge {
   width: auto;
   height: auto;
   padding: 5px;
@@ -112,7 +112,7 @@
   margin: 0 5px 0 0;
 }
 
-dl{
+.product_box dl{
   max-width: 304px;
   box-sizing: border-box;
   margin: 0;
@@ -133,7 +133,7 @@ dl{
   text-overflow: ellipsis;
 }
 
-.product_desc {
+.product_box dd.product_desc {
   width: 264px;
   height: 20px;
   font-size: 13px;
@@ -146,7 +146,7 @@ dl{
   text-overflow: ellipsis;
 }
 
-dd {
+.product_box dd {
   margin: 0;
   text-align: right;
 }
