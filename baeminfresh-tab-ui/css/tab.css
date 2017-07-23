@@ -94,9 +94,9 @@
 
 .badge_area {
   position: absolute;
-  bottom: -310px;
   width: 304px;
   height: 25px;
+  bottom: 140px;
   text-align: left;
   line-height: 25px;
   margin: 0 0 10px 10px;
