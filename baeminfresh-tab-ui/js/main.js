@@ -26,19 +26,22 @@ class Banner {
   }
 
   paginationEventHandler(e) {
-    this.init();
-
-    e.target.style.opacity = 1;
     const pageId = e.target.innerText;
     this.currentImg = document.getElementsByClassName('s' + pageId)[0];
 
-    this.currentImg.style.display = "block";
-    this.prevImg.style.display = "block";
+    if(this.currentImg == this.prevImg) return;
+    else {
+      this.init();
 
-    this.fadeIn(this.currentImg);
-    this.currentImg.style.zIndex = 50;
+      e.target.style.opacity = 1;
+      this.currentImg.style.display = "block";
+      this.prevImg.style.display = "block";
 
-    this.prevImg = this.currentImg;
+      this.fadeIn(this.currentImg);
+      this.currentImg.style.zIndex = 50;
+
+      this.prevImg = this.currentImg;
+    }
   }
 
   prevBtnEventHandler(e) {
