@@ -20,6 +20,11 @@
                 <span class="s_price">{{s_price}}</span>
               </dd>
             </dl>
+            <div class="badge_area">
+              {{#each badge}}
+                <span class="product_badge">{{this}}</span>
+              {{/each}}
+            </div>
           </a>
         </div>
       {{/each}}
