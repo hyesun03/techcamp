@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <script src="js/main.js" ></script>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/banner-image.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script type="myTemplate" id="tab-content-template">
       {{#each this}}
@@ -31,8 +32,67 @@
     </script>
   </head>
   <body>
-    <div class="content blank">
-
+    <div class="content main_banner">
+      <h1>메인 배너</h1>
+      <div id="main-banners" class="slides_container">
+        <div class="bx-wrapper" >
+          <div class="bx-viewport">
+            <ul class="main_slides_lst">
+              <li class="banner_image s1" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/list.php?cno=5070000&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★복날 기획전')">복날 기획전                            </a>
+              </li>
+              <li class="banner_image s2" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/honsul-salon.php&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 딩고')">딩고                            </a>
+              </li>
+              <li class="banner_image s3" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/brand/list.php?cno=30080624&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 무교동 명낙지')">중독 주의! 매운맛의 정석                            </a>다이어트 기획전                            </a>
+              </li>
+              <li class="banner_image s5" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/detail.php?hash=HB9D1&amp;cno=5070000&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ [보양식1-1][집밥의완성] 닭 보양식 2종')">[보양식1-1][집밥의완성] 닭 보양식 2종                            </a>
+              </li>
+              <li class="banner_image s6" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/list.php?cno=5070000&amp;ga_banner=1&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '☆ [보양식2-1]소식')">[보양식2-1]소식                            </a>
+              </li>
+              <li class="banner_image s7" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/side-dish/list.php?cno=30010900&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 3,300원 카테고리 오픈')">3,300원 카테고리 오픈                            </a>
+              </li>
+              <li class="banner_image s8" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/brand/list.php?cno=30080330&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '☆ [개금밀면] 앵콜 이벤트')">[개금밀면] 앵콜 이벤트                            </a>
+              </li>
+              <li class="banner_image s9" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/camping_2nd.php&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 캠핑기획전 2 ')">캠핑기획전 2                            </a>
+              </li>
+              <li class="banner_image s10" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/brand/list.php?cno=30080406&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 다담x옹가 론칭')">다담x옹가 론칭                            </a>
+              </li>
+              <li class="banner_image s11" aria-hidden="false">
+                  <a href="https://www.baeminfresh.com/board/?db=bfevent&amp;no=161&amp;mari_mode=view%40view&amp;cate=&amp;page=1&amp;listURL=https%3A%2F%2Fwww.baeminfresh.com%2Fboard%2F%3Fdb%3Dbfevent&amp;search=&amp;search_str=&amp;temp=&amp;pno=&amp;ono=&amp;ifr=&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '★ 옹가솜씨 쿠킹클래스 초대')">옹가솜씨 쿠킹클래스 초대                            </a>
+              </li>
+              <li class="banner_image s12" aria-hidden="true">
+                  <a href="https://www.baeminfresh.com/promotion/list.php?cno=5190000&amp;ga_banner=1&amp;ga_banner=1" onclick="ga('send', 'event', 'Product', 'Click Banner', '☆ 새로운 맘 ')">새로운 맘                             </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slides_navi">
+            <a href="#" class="slides_prev" title="이전">이전</a>
+            <a href="#" class="slides_next" title="다음">다음</a>
+        </div>
+        <ul class="slides_pagination">
+            <li><a href="#" class="">0</a></li>
+            <li><a href="#" class="">1</a></li>
+            <li><a href="#" class="">2</a></li>
+            <li><a href="#" class="">3</a></li>
+            <li><a href="#" class="">4</a></li>
+            <li><a href="#" class="">5</a></li>
+            <li><a href="#" class="">6</a></li>
+            <li><a href="#" class="">7</a></li>
+            <li><a href="#" class="">8</a></li>
+            <li><a href="#" class="">9</a></li>
+            <li><a href="#" class="now" style="opacity: 1">10</a></li>
+            <li><a href="#" class="">11</a></li>
+        </ul>
+      </div>
     </div>
     <div class="content best_product_area">
       <h3>베스트셀러</h3>

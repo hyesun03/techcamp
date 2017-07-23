@@ -1,0 +1,58 @@
+.banner_image {
+   float: none;
+   list-style: none;
+   position: absolute;
+   width: 100%;
+   z-index: 0;
+   display: none;
+}
+
+.s1 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170710/1499664994146_bb0efd9c4cc6.jpg');
+}
+
+.s2 {
+  background-image: url('https://cdn.bmf.kr/banner/temp_main_banner/170712/1499835605040_f75b0b095cd4.jpg');
+}
+
+.s3 {
+  background-image: url('https://cdn.bmf.kr/banner/temp_main_banner/170713/1499921375267_482833ebbe80.jpg');
+}
+
+.s4 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170712/1499849909533_711d52b30484.jpg');
+}
+
+.s5 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170706/1499316420194_a34c62ecf722.jpg');
+}
+
+.s6 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170711/1499762216226_982b82666d8c.jpg');
+}
+
+.s7 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170707/1499410281964_51fb39a533ad.jpg');
+}
+
+.s8 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170706/1499309555843_973ea4f49765.jpg');
+}
+
+.s9 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170704/1499145124189_ee205d29b823.jpg');
+}
+
+.s10 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170706/1499315550920_bcb3087568df.jpg');
+}
+
+.s11 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170706/1499319971682_30379a1464d9.jpg');
+  z-index: 50;
+  display: block;
+}
+
+.s12 {
+  background-image: url('https://cdn.bmf.kr/banner/main_banner/170405/1491367917020_ca4958af233a.jpg');
+}
