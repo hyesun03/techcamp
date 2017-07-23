@@ -50,6 +50,11 @@
   background-color: #1fcbc7;
 }
 
+.best_tab_list li.now {
+  color: white;
+  background-color: #1fcbc7;
+}
+
 .product_box {
   max-width: 304px;
   box-sizing: border-box;

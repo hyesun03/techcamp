@@ -13,6 +13,9 @@ class Tab {
     this.cache = [];
     this.tab = tab;
     this.addEvent();
+    this.getTabContent(0);
+    this.currentTab = document.getElementById("t0");
+    this.prevTab = document.getElementById("t0");
   }
 
   addEvent() {
@@ -20,7 +23,13 @@ class Tab {
   }
 
   tabEventHandler(e) {
-    const currentTabId = e.target.id.replace(/[^0-9]/g,'');
+    this.currentTab = e.target;
+    const currentTabId = this.currentTab.id.replace(/[^0-9]/g,'');
+
+    this.prevTab.classList.remove('now');
+    this.currentTab.classList.add('now');
+    this.prevTab = this.currentTab;
+
     this.getTabContent(currentTabId);
   }
 
@@ -41,7 +50,6 @@ class Tab {
   setTabContent(data) {
     const source = document.getElementById("tab-content-template").innerHTML;
   	const template = Handlebars.compile(source);
-    // console.log(template(data));
 
   	document.getElementById("best-container").innerHTML += template(data);
   }
