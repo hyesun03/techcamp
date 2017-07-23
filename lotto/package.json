@@ -1,0 +1,14 @@
+{
+  "name": "lotto",
+  "version": "1.0.0",
+  "description": "170706 woowa node tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hyesun03",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
