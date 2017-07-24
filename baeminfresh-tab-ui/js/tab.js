@@ -99,11 +99,11 @@ class Tab {
 
   setModalContent(data, title, n_price, s_price) {
     document.getElementById("top-image").style.backgroundImage = "url(" + data.top_image + ")";
-    document.getElementById("mod1").style.backgroundImage = "url(" + data.thumb_images[0] + ")";
-    document.getElementById("mod2").style.backgroundImage = "url(" + data.thumb_images[1] + ")";
-    document.getElementById("mod3").style.backgroundImage = "url(" + data.thumb_images[2] + ")";
-    document.getElementById("mod4").style.backgroundImage = "url(" + data.thumb_images[3] + ")";
-    document.getElementById("mod5").style.backgroundImage = "url(" + data.thumb_images[4] + ")";
+    document.getElementById("mod1").style.backgroundImage = (data.thumb_images[0] != undefined) ? "url(" + data.thumb_images[0] + ")" : "";
+    document.getElementById("mod2").style.backgroundImage = (data.thumb_images[1] != undefined) ? "url(" + data.thumb_images[1] + ")" : "";
+    document.getElementById("mod3").style.backgroundImage = (data.thumb_images[2] != undefined) ? "url(" + data.thumb_images[2] + ")" : "";
+    document.getElementById("mod4").style.backgroundImage = (data.thumb_images[3] != undefined) ? "url(" + data.thumb_images[3] + ")" : "";
+    document.getElementById("mod5").style.backgroundImage = (data.thumb_images[4] != undefined) ? "url(" + data.thumb_images[4] + ")" : "";
     document.getElementById("modal-title").innerHTML = title;
     document.getElementById("modal-desc").innerHTML = data.product_description;
 
