@@ -57,20 +57,23 @@ class Tab {
     const that = this;
 
     modalClose.addEventListener("click", function() {
+      document.getElementsByTagName("body")[0].style.overflow = "visible";
       modal.style.display = "none";
     })
 
     this.products[0].addEventListener("click", function() {
-      modal.style.display = "block";
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
-      const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML
+      const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML;
       const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+      modal.style.display = "block";
       that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
     this.products[1].addEventListener("click", function() {
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
       const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML;
       const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
       modal.style.display = "block";
       that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
@@ -78,6 +81,7 @@ class Tab {
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
       const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML;
       const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
       modal.style.display = "block";
       that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
