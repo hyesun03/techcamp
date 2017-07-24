@@ -97,8 +97,16 @@ class Tab {
     document.getElementById("mod2").style.backgroundImage = "url(" + data.thumb_images[1] + ")";
     document.getElementById("mod3").style.backgroundImage = "url(" + data.thumb_images[2] + ")";
     document.getElementById("mod4").style.backgroundImage = "url(" + data.thumb_images[3] + ")";
+    document.getElementById("mod5").style.backgroundImage = "url(" + data.thumb_images[4] + ")";
     document.getElementById("modal-title").innerHTML = title;
     document.getElementById("modal-desc").innerHTML = data.product_description;
+
+    document.querySelector("#modal-point span.value").innerHTML = data.point;
+    document.querySelector("#modal-delivery-info span.value").innerHTML = data.delivery_info;
+    document.querySelector("#modal-delivery-fee span.value").innerHTML = data.delivery_fee;
+
+    document.getElementById('modal-s-price').innerHTML = data.prices[0];
+    document.getElementById('modal-n-price').innerHTML = data.prices[1];
   }
 
 }
