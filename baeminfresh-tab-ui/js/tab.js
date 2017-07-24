@@ -124,6 +124,11 @@ class Tab {
       document.getElementById('modal-s-price').innerHTML = "";
     }
 
+    const source = document.getElementById("modal-temp-template").innerHTML;
+  	const template = Handlebars.compile(source);
+
+  	document.getElementById("modal-detail-info").innerHTML += template(data);
+
   }
 
 }

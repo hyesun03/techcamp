@@ -65,6 +65,14 @@
         </div>
       {{/each}}
     </script>
+    <!--modal detail 사진들 일부 만 템플릿 작업함 일단은.....-->
+    <script type="myTemplate" id="modal-temp-template">
+      {{#each detail_section}}
+        <div class="modal-temp">
+          <img src="{{this}}">
+        </div>
+      {{/each}}
+    </script>
   </head>
   <body>
     <!--메인 배너-->
@@ -175,7 +183,9 @@
             <div id="modal-s-price"></div>
           </div>
         </div>
+        <div id="modal-detail-info">
 
+        </div>
         <div></div>
       </div>
     </div>
