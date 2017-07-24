@@ -63,35 +63,41 @@ class Tab {
     this.products[0].addEventListener("click", function() {
       modal.style.display = "block";
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
-      that.getModalContent(this.id, currentTitle);
+      const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML
+      const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
+      that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
     this.products[1].addEventListener("click", function() {
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
+      const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML;
+      const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
       modal.style.display = "block";
-      that.getModalContent(this.id, currentTitle);
+      that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
     this.products[2].addEventListener("click", function() {
       const currentTitle = this.childNodes[5].childNodes[1].innerHTML;
+      const current_n_price = this.childNodes[5].childNodes[5].childNodes[1].innerHTML;
+      const current_s_price = this.childNodes[5].childNodes[5].childNodes[3].innerHTML;
       modal.style.display = "block";
-      that.getModalContent(this.id, currentTitle);
+      that.getModalContent(this.id, currentTitle, current_n_price, current_s_price);
     });
 
   }
 
-  getModalContent(productId, title) {
+  getModalContent(productId, title, np, sp) {
     const that = this;
     const oReq = new XMLHttpRequest();
 
     oReq.addEventListener("load", function(e) {
       const htData = JSON.parse(oReq.responseText);
-      that.setModalContent(htData.data, title);
+      that.setModalContent(htData.data, title, np, sp);
     });
 
     oReq.open("GET", this.baseurl + "woowa/detail/" + productId);
     oReq.send();
   }
 
-  setModalContent(data, title) {
+  setModalContent(data, title, n_price, s_price) {
     document.getElementById("top-image").style.backgroundImage = "url(" + data.top_image + ")";
     document.getElementById("mod1").style.backgroundImage = "url(" + data.thumb_images[0] + ")";
     document.getElementById("mod2").style.backgroundImage = "url(" + data.thumb_images[1] + ")";
@@ -105,8 +111,15 @@ class Tab {
     document.querySelector("#modal-delivery-info span.value").innerHTML = data.delivery_info;
     document.querySelector("#modal-delivery-fee span.value").innerHTML = data.delivery_fee;
 
-    document.getElementById('modal-s-price').innerHTML = data.prices[0];
-    document.getElementById('modal-n-price').innerHTML = data.prices[1];
+    if(!!s_price) {
+      document.getElementById('modal-n-price').innerHTML = n_price;
+      document.getElementById('modal-s-price').innerHTML = s_price;
+    }
+    else {
+      document.getElementById('modal-n-price').innerHTML = n_price;
+      document.getElementById('modal-s-price').innerHTML = "";
+    }
+
   }
 
 }
