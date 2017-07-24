@@ -38,7 +38,7 @@ class BanchanSlide {
   nextBtnEventHandler(e) {
     for(let i = 0; i < this.items.length; i++) {
       this.items[i].style.transition = ".5s";
-      this.items[i].style.transform = "translateX(-960px)";
+      this.items[i].style.transform = "translateX(-980px)";
     }
     const that = this;
 
