@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 300px;
+  overflow-x: hidden;
+}
+
+#viewport {
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+  display: -webkit-inline-box;
+}
+
+.tab {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  transition: .5s;
+}
+
+#t1 {
+  background-color: red;
+}
+
+#t2 {
+  background-color: green;
+}
+
+#t3 {
+  background-color: blue;
+}
+
+#t4 {
+  background-color: yellow;
+}
